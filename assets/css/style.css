@@ -12,17 +12,13 @@ body {
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #031a29;
+    background-color: #727374;
     color: #ffffff;
 }
 
 .header h1 {
     display: inline-block;
     font-size: 48px;
-}
-
-.header h1 .seo {
-    color: #d9dcd6;
 }
 
 .header nav {
@@ -40,7 +36,6 @@ body {
 .header nav ul li {
     display: inline-block;
     margin-left: 25px;
-    text-decoration: underline;
 }
 
 a {
@@ -52,23 +47,26 @@ p {
     font-size: 16px;
 }
 
-.photo {
-    
-    height: 400px;
+.portfolio-img {
+    height: 300px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/portfolio-img.png");
-    /* background-image: url("../images/digital-marketing-meeting.jpg"); */
+    background-image: url("../images/portfolio-img.jpg");
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    justify-items: center;
 }
-
 .image-text {
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    color:#2589bd /* Text color */
-    
+    bottom: 20%; 
+    top:auto;
+    right: 20px; /* Adjust distance from the right side */
+    transform: translateY(-150%); /* Center text vertically */
+    padding: 20px;   
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); 
+        
 }
 
 
@@ -77,6 +75,17 @@ p {
     margin: 0px 25px 0px 50px;
     width: 50px;
 
+}
+
+.project-img-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.larger-image img {
+    transform: scale(1.1); /* Increase size by 10% */
 }
 
 .float-right {
@@ -112,10 +121,25 @@ p {
 
 .project {
     display: flex;
-    position: relative;
+    flex: 1 0 100%;
+    /* position: relative; */
     margin-bottom: 20px;
-    max-width: 400px;
+    /* max-width: 400px; */
+    
+   
 }
+
+#work-projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.first-project{
+    flex: 2 0 100%;
+}
+
 
 .project-img-container {
     max-width: 450px;                /* max width for image container */
@@ -129,11 +153,11 @@ p {
 }
 
 .project-details {
-    flex-grow: 1; /* Allow details to grow to fill remaining space */
+    flex-grow: 1; 
 }
 
 .project h3 {
-    margin-top: 0; /* Remove top margin for consistency */
+    margin-top: 0; 
 }
 
 .project p {
@@ -146,159 +170,55 @@ p {
     color: #2589bd;
 }
 
-footer {
-    background-color: #333; /* Background color for the footer */
-    color: #fff; /* Text color */
+.footer {
+    width: 100%;
     padding: 20px; /* Padding around footer content */
     text-align: center; /* Center-align footer content */
 }
 
-footer ul {
-    list-style: none; /* Remove default list styles */
+.footer ul {
+    list-style-type: none; /* Remove default list styles */
     padding: 0;
 }
 
-footer ul li {
+.footer ul li {
     display: inline; /* Display list items inline */
-    margin-right: 10px; /* Add spacing between list items */
+    margin-right: 30px; /* Add spacing between list items */
 }
 
-footer ul li:last-child {
+.footer ul li:last-child {
     margin-right: 0; /* Remove right margin for the last list item */
 }
 
-footer ul li a {
-    color: #fff; /* Text color for links */
-    text-decoration: none; /* Remove underline from links */
+.footer ul li a {
+    color: black /* Text color for links */
+    
 }
 
-footer ul li a:hover {
+.footer ul li a:hover {
     text-decoration: underline; /* Underline links on hover */
 }
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 0 20px; 
-        max-width: 100%; 
+@media screen and (min-width: 768px) {
+    .project {
+        flex: 1 0 50%;
+        /* max-width: 400px; */
+    }
+
+    .first-project{
+        flex: 2 0 50%;
     }
 }
 
-/* .content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-} */
+@media screen and (min-width: 992px) {
+    .project {
+        flex: 1 0 25%;
+        /* max-width: 400px; */
+    }
 
-/* .benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
+    .first-project{
+        flex: 4 0 25%;
+    }
 }
 
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.about-me {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.work {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.contact-me {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.about-me img {
-    max-height: 200px;
-}
-
-.work img {
-    max-height: 200px;
-}
-
-.contact-me img {
-    max-height: 200px;
-}
-
-.about-me h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.work h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.contact-me h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-} */
 
 
