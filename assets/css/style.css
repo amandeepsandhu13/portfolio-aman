@@ -4,8 +4,9 @@
     margin: 0;
 }
 
+
 body {
-    background-color: #d9dcd6;
+    background-color:azure;
 }
 
 .header {
@@ -51,18 +52,31 @@ p {
     font-size: 16px;
 }
 
-.hero {
-    height: 800px;
+.photo {
+    
+    height: 400px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
+    background-image: url("../images/portfolio-img.png");
+    /* background-image: url("../images/digital-marketing-meeting.jpg"); */
     background-size: cover;
     background-position: center;
 }
 
-.float-left {
+.image-text {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    color:#2589bd /* Text color */
+    
+}
+
+
+.float-left {                        /*section title */
     float: left;
-    margin-right: 25px;
+    margin: 0px 25px 0px 50px;
+    width: 50px;
+
 }
 
 .float-right {
@@ -70,10 +84,102 @@ p {
     margin-left: 25px;
 }
 
+.vertical-line{
+    border: #2589bd 2px solid;
+    height: 100%;
+    margin-left: 20px;
+    min-height: 200px;
+}
+
 .container{
     display: flex;
+    flex-direction: column;
+}
+
+.section{
+    display: flex;
     align-items: center;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.content{
+    display: flex; 
+    text-align: left;
+    padding: 20px;
     flex-wrap: wrap;
+}
+
+.project {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.project-img-container {
+    max-width: 450px;                /* max width for image container */
+    margin-right: 20px;             /* margin between image and details */
+}
+
+.project img {
+    max-width: 100%; /* to make images are responsive */
+    height: auto;
+    display: block;
+}
+
+.project-details {
+    flex-grow: 1; /* Allow details to grow to fill remaining space */
+}
+
+.project h3 {
+    margin-top: 0; /* Remove top margin for consistency */
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: block;
+    margin-top: 10px;
+    color: #2589bd;
+}
+
+footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding around footer content */
+    text-align: center; /* Center-align footer content */
+}
+
+footer ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+}
+
+footer ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 10px; /* Add spacing between list items */
+}
+
+footer ul li:last-child {
+    margin-right: 0; /* Remove right margin for the last list item */
+}
+
+footer ul li a {
+    color: #fff; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer ul li a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px; 
+        max-width: 100%; 
+    }
 }
 
 /* .content {
@@ -82,7 +188,7 @@ p {
     margin-left: 20px;
 } */
 
-.benefits {
+/* .benefits {
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -193,15 +299,6 @@ p {
 .contact-me h2 {
     margin-bottom: 20px;
     font-size: 36px;
-}
+} */
 
-.footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-}
 
-.footer h2 {
-    font-size: 20px;
-}
