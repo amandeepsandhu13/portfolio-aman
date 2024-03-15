@@ -84,10 +84,6 @@ p {
     transition: transform 0.3s ease;
 }
 
-.larger-image img {
-    transform: scale(1.1); /* Increase size by 10% */
-}
-
 .float-right {
     float: right;
     margin-left: 25px;
@@ -110,6 +106,7 @@ p {
     align-items: center;
     min-height: 200px;
     padding: 20px;
+    
 }
 
 .content{
@@ -124,51 +121,54 @@ p {
     flex: 1 0 100%;
     /* position: relative; */
     margin-bottom: 20px;
-    /* max-width: 400px; */
-    
-   
+     max-width: 100%; 
+      
 }
 
 #work-projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     
 }
 
 .first-project{
-    flex: 2 0 100%;
+    flex: 1 0 100%;
+    
 }
 
 
 .project-img-container {
-    max-width: 450px;                /* max width for image container */
-    margin-right: 20px;             /* margin between image and details */
+    max-height: 50%;                /* max width for image container */
+    margin-right: 20px;     
+    align-items: center;        /* margin between image and details */
+    
 }
 
-.project img {
-    max-width: 100%; /* to make images are responsive */
+
+.project-img-container p{
+    position: absolute;
+}
+
+.project-img-container img {
+    max-width: 100%; /* to make images  responsive */
     height: auto;
     display: block;
+    
+    
 }
 
 .project-details {
     flex-grow: 1; 
 }
 
-.project h3 {
-    margin-top: 0; 
-}
-
-.project p {
-    margin-bottom: 10px;
-}
 
 .project a {
     display: block;
     margin-top: 10px;
     color: #2589bd;
-}
+} 
 
 .footer {
     width: 100%;
@@ -200,25 +200,20 @@ p {
 }
 @media screen and (min-width: 768px) {
     .project {
-        flex: 1 0 50%;
-        /* max-width: 400px; */
+        flex: 0 0 50%;
     }
 
     .first-project{
-        flex: 2 0 50%;
+        flex: 0 0 100%;
     }
 }
 
 @media screen and (min-width: 992px) {
     .project {
-        flex: 1 0 25%;
-        /* max-width: 400px; */
+        flex: 0 0 50%;
     }
 
     .first-project{
-        flex: 4 0 25%;
+        flex: 0 0 100%;
     }
 }
-
-
-
