@@ -14,5 +14,13 @@
 
  After that 'Contact Me ' Section is added that shows contact links
 
+ Git Repo link:
+
+ https://github.com/amandeepsandhu13/portfolio
+
+ Deployed link:
+
+ https://amandeepsandhu13.github.io/portfolio/
+
 
 

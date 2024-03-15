@@ -77,17 +77,8 @@ p {
 
 }
 
-.project-img-container img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
 
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
+
 
 .vertical-line{
     border: #2589bd 2px solid;
@@ -116,6 +107,8 @@ p {
     flex-wrap: wrap;
 }
 
+/*** Project work section ***/
+
 .project {
     display: flex;
     flex: 1 0 100%;
@@ -133,12 +126,6 @@ p {
     
 }
 
-.first-project{
-    flex: 1 0 100%;
-    
-}
-
-
 .project-img-container {
     max-height: 50%;                /* max width for image container */
     margin-right: 20px;     
@@ -146,6 +133,21 @@ p {
     
 }
 
+.project-img-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.first-project{
+    flex: 1 0 100%;
+    
+}
+.first-project img{
+    max-height: 50%;
+    
+}
 
 .project-img-container p{
     position: absolute;
