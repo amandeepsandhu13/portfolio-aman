@@ -16,11 +16,11 @@
 
  Git Repo link:
 
- https://github.com/amandeepsandhu13/portfolio
+ https://amandeepsandhu13.github.io/portfolio-aman/
 
  Deployed link:
 
- https://amandeepsandhu13.github.io/portfolio/
+ https://amandeepsandhu13.github.io/portfolio-aman/
 
 
 
